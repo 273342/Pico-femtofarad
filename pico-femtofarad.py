@@ -16,6 +16,7 @@ import time
 # PIO state machine program to do all the precise timing.  The PIO staate
 # machine will actually do a group of 8 readings and pack the restuls
 # into 4 words to take the load off of micropython.
+# this bit written by Google Gemini AI -- with a lot of iterations and guidance.
 @rp2.asm_pio(set_init=rp2.PIO.OUT_LOW, out_init=rp2.PIO.OUT_LOW)
 def pio_octo_pack_loop():
     wrap_target()
